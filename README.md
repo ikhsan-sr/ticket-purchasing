@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Ticket Purchasing - Telkom Test
+
+Preview
+![ticketmaster](https://user-images.githubusercontent.com/64444511/209475079-2b28f9d5-bf50-46db-bd5d-d305aacbfcdb.jpg)
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
