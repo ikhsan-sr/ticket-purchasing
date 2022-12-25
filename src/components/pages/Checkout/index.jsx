@@ -15,8 +15,9 @@ const Checkout = () => {
 
   useEffect(() => {
       fetch(API_GET_CART)
-          .then(response => {
-            setData(response.json(response));
+          .then(response => response.json())
+          .then(checkoutData => {
+            setData(checkoutData);
             setLoading(false);
           });
   }, []);
