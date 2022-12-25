@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export const TotalStyles = styled.div`
+
+  h4 {
+    margin: 1.2rem 0 0.4rem 0;
+  }
+
   .total-wrapper {
     display: flex;
     justify-content: space-between;
@@ -45,7 +50,7 @@ export const TotalStyles = styled.div`
   .delivery-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     .text {
       flex: 1;
@@ -54,5 +59,16 @@ export const TotalStyles = styled.div`
       width: 50px;
       text-align: end;
     }
+  }
+
+  .cancel {
+    cursor: pointer;
+    color: #2D6CD7;
+    line-height: 55px;
+  }
+
+  .note {
+    font-size: 12px;
+    font-weight: bold;
   }
 `;

@@ -1,10 +1,17 @@
 import React from 'react';
 
-const Button = ({ text, onClick, ghost }) => {
+import { ButtonStyles } from './styles';
+
+const Button = ({ text, onClick, type, primary, style }) => {
   return (
-    <button type="button" onClick={onClick}>
+    <ButtonStyles
+      type="button"
+      onClick={onClick}
+      primary={primary}
+      style={style}
+    >
       {text}
-    </button>
+    </ButtonStyles>
   )
 }
 

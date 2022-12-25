@@ -18,11 +18,12 @@ const Total = () => {
     delivery,
     deliveryFee,
     termsOfUse,
+    orderingFee,
   } = useContext(CheckoutContext);
 
   const allTicket = price * quantity;
   const allFee = serviceFee * quantity;
-  const totalPrice = allTicket + allFee;
+  const totalPrice = allTicket + allFee + orderingFee;
 
   const handleCancel = () => alert('Cancel Order');
 
@@ -46,13 +47,17 @@ const Total = () => {
           <div className="total">${allTicket}</div>
         </div>
 
-        <h4>Notes From Seller</h4>
-        <p>{sellerNotes}</p>
+        <h4 className="text">Notes From Seller</h4>
+        <div>{sellerNotes}</div>
 
         <h4>Fees</h4>
         <div className="fees-wrapper">
           <div className="text">Service Fee: ${serviceFee} x {quantity}</div>
           <div className="total">${allFee}</div>
+        </div>
+        <div className="fees-wrapper">
+          <div className="text">Order Processing Fee</div>
+          <div className="total">${orderingFee}</div>
         </div>
 
         <h4>Delivery</h4>
@@ -61,11 +66,7 @@ const Total = () => {
           <div className="total">{deliveryFee}</div>
         </div>
 
-        <Button
-          text="Cancel Order"
-          onClick={handleCancel}
-          ghost={true}
-        />
+        <span className="cancel" onClick={handleCancel}>Cancel Order</span>
 
         <Checkbox
           type="primary"
@@ -77,9 +78,11 @@ const Total = () => {
         <Button
           text="Place Order"
           onClick={handleOrder}
+          primary={true}
+          style={{ margin: '12px 0' }}
         />
 
-        noted
+        <div className="note">*Exceptions may apply, see our Terms of Use.</div>
       </TotalStyles>
     </Card>
   )
