@@ -1,0 +1,1 @@
+export const API_GET_CART = 'https://6398216bfe03352a94c5a9f4.mockapi.io/api/v1/checkout/1';
