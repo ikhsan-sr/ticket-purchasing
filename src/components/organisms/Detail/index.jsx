@@ -12,17 +12,19 @@ const Detail = () => {
   const dateDelivery = moment(deliveryDate).format(DATE_FORMAT);
 
   return (
-    <DetailStyles>
-      <Card>
-        <h2>Delivery</h2>
+    <Card>
+      <DetailStyles>
+        <h2>Delivery
+          <img src="/checkmark.png" alt="delivery" />
+        </h2>
         <h4>{delivery} - {deliveryFee}</h4>
 
         <div className="detail">Tickets Available by {dateDelivery}
           <br/>
           {DETAIL_TEXT}
         </div>
-      </Card>
-    </DetailStyles>
+      </DetailStyles>
+    </Card>
   )
 }
 

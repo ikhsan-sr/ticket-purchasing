@@ -70,7 +70,7 @@ const Total = () => {
 
         <Checkbox
           type="primary"
-          label={<span>I have read and agree to the current <a href={termsOfUse}>Terms of Use</a></span>}
+          label={<span>I have read and agree to the current <a href={termsOfUse} target="_blank" rel="noreferrer">Terms of Use</a></span>}
           value={agree}
           onChange={() => setAgree(!agree)}
         />

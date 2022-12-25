@@ -9,6 +9,9 @@ import { CardStyles } from './styles';
 const PaymentCardItem = () => {
   const { creditCardName, creditCardNumber, creditCardExpiration } = useContext(CheckoutContext);
 
+  const handleEdit = () => alert('Handle edit');
+  const handleDelete = () => alert('Handle delete');
+
   return (
     <CardStyles>
       <div className="checkbox">
@@ -16,16 +19,23 @@ const PaymentCardItem = () => {
       </div>
       <div className="detail">
         <div className="card">
-          <div className="img-wrapper">img</div>
+          <div className="img-wrapper">
+            <img src="/visa.png" alt="visa" />
+          </div>
           <div className="text-detail">
-            <div className="">Visa - {creditCardNumber}</div>
-            <div className="">{creditCardName} | exp. {creditCardExpiration}</div>
-            <div className="">Edit | Delete</div>
+            <div className="name">Visa - {creditCardNumber}</div>
+            <div className="exp">{creditCardName} | exp. {creditCardExpiration}</div>
+            <div className="action">
+              <span className="text-button" onClick={handleEdit}>Edit</span> |
+              <span className="text-button" onClick={handleDelete}>{' '}Delete</span>
+            </div>
           </div>
         </div>
 
         <div className="security">
-          <input type="text" />
+          <div className="label">Security Code</div>
+          <input type="password" maxLength={3}/>
+          <img src="/card.png" alt="security" />
           3-digits on back of card
         </div>
       </div>
